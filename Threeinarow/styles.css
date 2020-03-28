@@ -1,0 +1,25 @@
+
+table,td{
+    border:black 1px solid;
+    border-spacing: 0px;
+}
+td{
+    padding:0px;
+    width:50px;
+    height:50px;
+    font-size:2em;
+    text-align: center;
+    color: with;
+}
+.state0{
+    background-color: #f0f0f0;
+}
+.state1{
+    background-color: navy;
+}
+.state2{
+    background-color: green;
+}
+#status{
+    padding: 10px 0px;
+}

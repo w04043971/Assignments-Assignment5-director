@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="styles.css" rel="stylesheet" />
+	<title>Document</title>
+</head>
+
+
+<body>
+		<div id="space"></div>
+	<form >
+		<table>
+			<tr>
+				<th>Choose a country from the list:
+					<div class="dropdown">
+						<select id="countries" onchange="displayCountryData(this)">
+							<option value="">-- Select --</option>
+						</select>
+					</div>
+				</th>
+				<th>
+					<div class="info">Cantry info:  <a  id="names"></a>
+						<br>
+						<br>
+						<p id="flag" class="flag"></p>
+						<!-- <div style="border:1px solid black" id="myTable";
+							<p id="flag" class="flag"></p>
+						</div> -->
+						<br>
+						<br>Population
+						<br>
+						<input type="text" size="30" id="population" name=" Population">
+						<br>Area:
+						<br>
+						<select name="mesures" id="mesures" onchange="displayCountryAreea()">
+							<option value="SqMilles">Sq.Milles</option>
+							<option value="Km">Sq.Km</option>
+						</select>
+						<br>
+						<input type="text" size="30" id="Area" name="Area">
+						<br>
+						<br>
+						<fieldset>Population density
+							<br>
+							<input type="radio" name="size" id="milles" checked onchange=" displayCountryDensity()">Per squaer Milles
+							<br>
+							<input type="radio" name="size" id="KM2" onchange="displayCountryDensity()">Per square Km
+							<br>
+							<input type="text" id="density" name=" Population">
+							<br>
+						</fieldset>
+						<br>
+						<br>Procentage of word population
+						<br>
+						<input type="text" size="30" id="Procentage" name="Procentage">
+						<br>
+						<br>
+						<br>
+						<button id="Wiki" onclick="launchWiki()">Wiki</button>
+						<button id="LanchQuiz">Lanch Quiz</button>
+					</div>
+				</th>
+			</tr>
+		</table>
+		<script src="script.js"></script>
+	</form>
+</body>
+</html>

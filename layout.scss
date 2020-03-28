@@ -1,0 +1,147 @@
+
+/* Define standard variables and values for website */
+$bgcolor: black;
+$textcolor:  red + blue;;
+$fontsize: 25px;
+$fontsize-welcome: 40px;
+$fontsize-topnav:17px;
+$height: 100vh;
+$font:Space Mono;
+$br-footer: Navy;
+$breakpoint-tablet: 600px;
+
+@mixin cursorshape($shape: 1) {
+  @if $shape==1 {
+    cursor: crosshair;
+    //color: $light-text;
+  } @else if $shape==2{
+    cursor: wait;
+    //color: $light-text;
+  }@else if $shape==3{
+    cursor: pointer;
+    //color: $light-text;
+  }
+}
+
+@mixin box-shadow($top, $left, $blur, $size, $color) {
+  -webkit-box-shadow: $top $left $blur $size $color;
+  -moz-box-shadow: $top $left $blur $size $color;
+  box-shadow: $top $left $blur $size $color;
+}
+
+
+@media only screen and (max-width: $breakpoint-tablet) {
+  #profile-link{ 
+    background-color: $bgcolor;
+    display: none;
+  }
+} 
+/* Style the navigation menu */
+.topnav{
+   // position: fixed;
+   overflow: hidden;
+   background-color:$bgcolor;
+   position:fixed;
+   top:0px;
+   padding: 20px; 
+   margin-left: -10px; 
+   /* Hide the links inside the navigation menu (except for logo/home) */
+   #myLinks {
+   display: none;
+   .link1{
+    @include cursorshape(1);
+    }
+    .link2{
+    @include cursorshape(2);
+    }
+    .link3{
+    @include cursorshape(3);
+    }
+  }
+  /* Style navigation menu links */
+  a{
+    color: $textcolor;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: $fontsize-topnav;
+    display: block; 
+  }
+  /* Style the hamburger menu */
+  a.icon {
+    background: $bgcolor;
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 0;
+    @include cursorshape(3);
+  }
+  /* Add a grey background color on mouse-over */
+  /* .topnav a:hover 
+  background-color: #ddd;
+  color: black;
+ */
+  
+}
+    
+body{
+  background-color: $bgcolor;
+  color:$textcolor;
+  font-family: $font;
+  @include cursorshape(3);
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: $bgcolor;
+  @include cursorshape(2);
+}
+
+#welcome-section{
+  height: $height;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  background-image: url("https://cdn.pixabay.com/photo/2017/09/14/22/42/milky-way-2750627_960_720.jpg");
+  h1{
+    font-size: $fontsize-welcome;
+  }
+  p{
+    font-size: $fontsize;
+  }
+}
+#projects{
+  height:100%;
+  text-align: center;
+  .row{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    height: 400px;
+    margin-bottom: 50px;
+    /* margin-right: 30px; */
+    }
+  .project-tile{
+    display:flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    /* border:1px solid red;  */
+    flex:1;
+    iframe{
+    @include box-shadow(10px,10px,10px,10px, rgba(233, 127, 127, 0.822));
+    }
+    // box-shadow: 6px 9px 20px 1px rgba(0, 0, 0, 0.68), inset -1px -6px 12px 0.1px #89847e;
+    a{
+      color:$textcolor;
+    }
+  }
+}
+
+// .profile-links{
+//   display: flex;
+// }
+#footer {
+  display:flex;
+  justify-content: center;
+  background: $br-footer;
+} 

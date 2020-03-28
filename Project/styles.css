@@ -1,0 +1,25 @@
+body{
+    
+    background-color: rgb(255, 214, 80);
+    color: black;
+}
+/*div {
+    height: 200px;
+    width: 50%;
+    background-color: powderblue;
+  }*/
+   .flag{
+    width: 1px;
+    height: 100px;
+  
+  }
+  th {
+    text-align: left;
+  }
+  .dropdown{
+     padding-bottom:12.4cm;
+
+  }
+ .info{
+   padding-top:2cm;
+ }
